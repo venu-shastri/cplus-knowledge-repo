@@ -139,7 +139,7 @@ void main()
 
 
 
-#### EXCERSISE
+#### Exercise
 
 ---
 
