@@ -78,7 +78,7 @@ void main()
 
 ---
 
-![image-20230327221319912](E:\Bosch_C++_Training\macorsInSourceFiles)
+![image-20230327221319912](macorsInSourceFiles)
 
 > If you need to use the same macros in different source files, it makes sense to create a header file. You can then include the header file in your source files
 
