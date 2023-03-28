@@ -1,7 +1,7 @@
 class Employee {
 
 private: string name, id, bloodGroup;
-public:
+protected:
 	Employee(string nameArg,string idArg,string bgArg) {
 		cout << "Empployee Constructor Invoked" << endl;
 	}
