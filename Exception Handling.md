@@ -11,7 +11,7 @@
 
   - If a function uses its return value to indicate errors, the return value must be examined whenever the function is called, even if no error has occurred.
 
-    ![image-20230329211625127](E:\cplus-knowledge-repo\ErrorReturnValue)
+    ![image-20230329211625127](ErrorReturnValue)
 
 - global error variables or flags are set when errors occur, and then checked again
   later.
@@ -237,4 +237,4 @@ double calc(int a, int b) throw (MathError)
 
   
 
-![image-20230329220012166](E:\cplus-knowledge-repo\exception classes)
+![image-20230329220012166](exception classes)
