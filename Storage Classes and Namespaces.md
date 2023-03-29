@@ -46,7 +46,7 @@ Also referred to as module, comprises the source file you are compiling and any 
 
 ---
 
-![image-20230329051547067](E:\Bosch_C++_Training\AvailabilityOfAnObject)
+![image-20230329051547067](AvailabilityOfAnObject)
 
 
 
@@ -203,7 +203,7 @@ Using global names in large-scale software projects can lead to conflicts, espec
 - Using namespaces global scope is subdivided into isolated parts.
 - A  namespace is identified by a name preceded by the `namespace` keyword.
 
-![image-20230329060715592](E:\Bosch_C++_Training\namespace)
+![image-20230329060715592](namespace)
 
 - If you need to reference an element from outside of the namespace, you must additionally supply the namespace. To do so, place the **scope resolution operator, ::,** before the element name
 - **Example: myLib::count = 7; // Outside of myLib**
