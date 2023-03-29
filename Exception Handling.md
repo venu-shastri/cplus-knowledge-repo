@@ -237,4 +237,4 @@ double calc(int a, int b) throw (MathError)
 
   
 
-![image-20230329220012166](exception classes)
+![image-20230329220012166](exceptionclasses)
