@@ -4,7 +4,7 @@
 
 
 
-![image-20230329221412377](E:\cplus-knowledge-repo\overloadableOperators)
+![image-20230329221412377](overloadableOperators)
 
 Note:
 
@@ -132,7 +132,7 @@ Imagine you need to write a global function that accesses the elements of a nume
 
 ---
 
-![image-20230330051412343](E:\cplus-knowledge-repo\friendFunction)
+![image-20230330051412343](friendFunction)
 
 - Here the global function **globFunc()** and the method **elFunc()** of class B are declared as friend functions of class A.
 - This allows them direct access to the private members of class A
