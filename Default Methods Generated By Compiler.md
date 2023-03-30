@@ -110,7 +110,7 @@ int main()
 }
 ```
 
-![image-20230330055322878](E:\cplus-knowledge-repo\standardCopyConstructor)
+![image-20230330055322878](standardCopyConstructor)
 
 ```C++
 A standard copy constructor is normally sufficient for a class. However, simply copying the data members would serve no useful purpose for objects containing dynamic members(neighbours). This would merely copy the pointers, meaning that the pointers of several different objects would reference the same place in memory
