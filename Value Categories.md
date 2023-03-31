@@ -10,7 +10,7 @@
 
 Any expression in a C++ 11 program belongs to exactly one of these primary value categories:
 
-![image-20230330214230926](E:\cplus-knowledge-repo\valueCategories)
+![image-20230330214230926](valueCategories)
 
 - **lvalue** (“locator value”)
 -  **prvalue** (“pure readable value”)
