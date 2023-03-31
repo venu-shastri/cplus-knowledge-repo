@@ -101,13 +101,13 @@ std::string c = std::move(b); // initialize  c with the value of b (no longer ne
 > The move constructor first copies both the members len and data, meaning that the new string gets ownership
 > of the value of b .
 
-![image-20230330230546307](E:\cplus-knowledge-repo\moveConstructor)
+![image-20230330230546307](moveConstructor)
 
 > However, this is not enough, because the destructor of b would free the memory. Therefore, we also modify
 > the source string to lose its ownership of the memory and bring it into a consistent state representing the
 > empty string: The effect is that **c** now has the former value of  **b and that b is the empty string.**
 
-![image-20230330230723339](E:\cplus-knowledge-repo\moveConstructor_2)
+![image-20230330230723339](moveConstructor_2)
 
 Note
 
