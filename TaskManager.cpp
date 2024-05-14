@@ -1,4 +1,4 @@
-public class Printer{
+class Printer{
 
     public:
      void print(string path){
