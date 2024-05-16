@@ -6,17 +6,9 @@ class Paragraph;
 class Link;
 class Header;
 class Footer;
-class IDocumentConveter;
 class Document;
-class HtmlConverter;
 
-class IDocumentConveter {
-public:
-	virtual void convert(Paragraph* paragraphPtr) = 0;
-	virtual void convert(Link* linkPtr) = 0;
-	virtual void convert(Header* headerPtr) = 0;
-	virtual void convert(Footer* headerPtr) = 0;
-};
+
 class DocumentPart {
 private: string  name;
 
@@ -27,7 +19,7 @@ public:
 	string getName() const { return this->name; }
 	virtual void paint() = 0;
 	virtual void save() = 0;
-	virtual void convert(IDocumentConveter* converter) = 0;
+
 };
 
 class Paragraph :public DocumentPart {
@@ -40,9 +32,6 @@ public:
 	}
 	void save() {
 		cout << "Paragraph Saved" << endl;
-	}
-	void convert(IDocumentConveter* converter){
-		converter->convert(this);
 	}
 
 };
@@ -57,9 +46,6 @@ public:
 	void save() {
 		cout << "Link Saved" << endl;
 	}
-	void convert(IDocumentConveter* converter) {
-		converter->convert(this);
-	}
 };
 class Header :public DocumentPart {
 private: string text;
@@ -72,9 +58,7 @@ public:
 	void save() {
 		cout << "Header Saved" << endl;
 	}
-	void convert(IDocumentConveter* converter) {
-		converter->convert(this);
-	}
+
 };
 class Footer :public DocumentPart {
 public:
@@ -84,19 +68,9 @@ public:
 	void save() {
 		cout << "Footer Saved" << endl;
 	}
-	void convert(IDocumentConveter* converter) {
-		converter->convert(this);
-	}
 };
 //interface
 
-class HtmlConverter:public IDocumentConveter {
-public:
-	void convert(Paragraph* paragraphPtr) { cout << "<p>" + paragraphPtr->getContent() + "</p>" << endl; }
-	void convert(Link* linkPtr) { cout << "<a>" + linkPtr->getUrl() + "</a>" << endl; }
-	void convert(Header* headerPtr) { cout << "<header>" +headerPtr->getText() + "</header>" << endl; }
-	void convert(Footer* headerPtr) { cout << "<footer></header>" << endl; }
-};
 class Document {
 private:
 	vector<DocumentPart*> parts;
@@ -108,11 +82,6 @@ public:
 		//iteration
 	}
 	void save() {}
-	void convert(IDocumentConveter* converter) {
-		for (int i = 0; i < parts.size(); i++) {
-			parts[i]->convert(converter);
-		}
-	}
 };
 
 int main() {
@@ -127,7 +96,5 @@ int main() {
 	docObj.addPart(paraGraph);
 	docObj.addPart(link);
 
-	IDocumentConveter* converter = new HtmlConverter();
-	docObj.convert(converter);
 
 }
